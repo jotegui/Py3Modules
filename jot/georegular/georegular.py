@@ -9,8 +9,6 @@ def frecuenciesExtraction(data):
 	finaldict = {}
 	provlist = list(countDistinctValues(data,0).keys())
 	dataSegmented = segmentArray(data)
-	
-	print(dataSegmented)
 
 	for i in dataSegmented:
 		datadict = {}
