@@ -13,4 +13,6 @@ jot/						Main module folder
     transposeFile.py		Transposes a file, i.e., turns rows into columns and viceversa separated by user-specific character
   mysql/					Some mysql functions. Require Pete Hunt's PyMySQL https://github.com/petehunt/PyMySQL
     showProcess.py			Shows info on the processes of a given MySQL server instance
+  georegular/				Script to detect if sets of coordinates follow regular patterns or show random distribution
+    georegular.py
 dev/						Some functions that need to be upgraded to Python3 or are in progress
