@@ -4,16 +4,16 @@ Some useful modules and functions written un Python3.
 
 Modules are distributed into different folders, each one according to their common function:
 
-jot/							Main module folder
-	__init__.py
-	basic/						Some basic stuff, shortcuts to other functions
-		__init__.py
-		checkElementInArray.py	Search iteratively for an element in an array
-		countDistinctValues.py	Count the number of times each element appears in an array
-		segmentArray.py			Modifies an array from [[cat1, value1, value2], [cat2, ...]] to a dict {cat1: [value1, value2], cat2: [...]}
-		testHost.py				Checks for the existence of a given host in the network
-		transposeFile.py		Transposes a file, i.e., turns rows into columns and viceversa separated by user-specific character
-	mysql/						Some mysql functions. Require Pete Hunt's PyMySQL https://github.com/petehunt/PyMySQL
-		__init__.py
-		showProcess.py			Shows info on the processes of a given MySQL server instance
-dev/							Some functions that need to be upgraded to Python3 or are in progress
+jot/						Main module folder
+  __init__.py
+  basic/					Some basic stuff, shortcuts to other functions
+    __init__.py
+    checkElementInArray.py	Search iteratively for an element in an array
+    countDistinctValues.py	Count the number of times each element appears in an array
+    segmentArray.py			Modifies an array from [[cat1, value1, value2], [cat2, ...]] to a dict {cat1: [value1, value2], cat2: [...]}
+    testHost.py				Checks for the existence of a given host in the network
+    transposeFile.py		Transposes a file, i.e., turns rows into columns and viceversa separated by user-specific character
+  mysql/					Some mysql functions. Require Pete Hunt's PyMySQL https://github.com/petehunt/PyMySQL
+    __init__.py
+    showProcess.py			Shows info on the processes of a given MySQL server instance
+dev/						Some functions that need to be upgraded to Python3 or are in progress
