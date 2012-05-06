@@ -16,3 +16,5 @@ jot/						Main module folder
   georegular/				Script to detect if sets of coordinates follow regular patterns or show random distribution
     georegular.py
 dev/						Some functions that need to be upgraded to Python3 or are in progress
+
+Test line
