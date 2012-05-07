@@ -15,10 +15,16 @@ def testHost( host ):
 	import sys
 	
 	alive = False
-	status = os.system( " ping -n 1 " + host + " > eraseme.tmp " ) # 0 = alive ; 1 = dead or inex
+	system = sys.platform
+	
+	if system == 'linux2':
+		status = os.system("ping -c 1 " + host + " > /dev/null")
+	elif system == 'win32':
+		status = os.system( " ping -n 1 " + host + " > eraseme.tmp " )
+		os.system ( "del eraseme.tmp" )
+		
 	if status == 0:
 		alive = True
-	deleteerase = os.system ( "del eraseme.tmp" )
 	
 	return alive
 
