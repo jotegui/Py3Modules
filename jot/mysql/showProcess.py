@@ -1,4 +1,4 @@
-def showprocess(host, user, passwd, secs = -9):
+def showProcess(host, user, passwd, secs = -9):
 	"""
  Shows the current threads working on a given MySQL server instance. Specifically, shows PID, Elapsed Time, current action and query for each process in the server.
  
@@ -93,5 +93,4 @@ if __name__ == '__main__':
 	if secs == '':
 		secs = 0
 	
-	showprocess(host, user, passwd, secs)
-	
+	showProcess(host, user, passwd, secs)
