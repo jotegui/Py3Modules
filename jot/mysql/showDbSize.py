@@ -5,7 +5,7 @@ def showDbSize( host, user, passwd ):
 	import pymysql
 	
 	conx = pymysql.connect( host = host, user = user, passwd = passwd )
-	query = "SELECT table_schema \"Data Base Name\", sum( data_length + index_length )/1024/1024 \"Data Base Size in MB\" FROM information_schema.TABLES GROUP BY table_schema;"
+	query = "SELECT table_schema, sum( data_length + index_length ) FROM information_schema.TABLES GROUP BY table_schema;"
 	cur = conx.cursor()
 	cur.execute(query)
 	res = cur.fetchall()
@@ -43,9 +43,13 @@ if __name__ == '__main__':
 	for i in indexes:
 		size = ""
 		if len(str(round(i[1],0)))<=3:
-			size = str(round(i[1],3))+"Mb"
+			size = str(round(i[1],2))+"B"
 		elif len(str(round(i[1],0)))>3 and len(str(round(i[1],0)))<=6:
-			size = str(round(i[1]/1000,2))+"Gb"
+			size = str(round(i[1]/1024,2))+"Kb"
+		elif len(str(round(i[1],0)))>6 and len(str(round(i[1],0)))<=9:
+			size = str(round(i[1]/1024/1024,2))+"Mb"
+		elif len(str(round(i[1],0)))>9 and len(str(round(i[1],0)))<=12:
+			size = str(round(i[1]/1024/1024/1024,2))+"Gb"
 		else:
-			size = str(round(i[1]/1000000,2))+"Tb"
+			size = str(round(i[1]/1024/1024/1024/1024,2))+"Tb"
 		print(i[0]+": "+size)
