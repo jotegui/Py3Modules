@@ -1,8 +1,6 @@
 def frecuenciesExtraction(data):
 	
-	from jot.basic.checkElementInArray import checkElementInArray
-	from jot.basic.countDistinctValues import countDistinctValues
-	from jot.basic.segmentArray import segmentArray
+	from jot.basic.arrayOperations import *
 	
 	datavalues = {}
 	array = []
